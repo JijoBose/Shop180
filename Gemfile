@@ -24,6 +24,8 @@ gem 'simple_form'
 
 # Authentication
 gem 'devise'
+# Role based
+gem 'cancancan', '~> 2.3'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'

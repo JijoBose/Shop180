@@ -5,6 +5,9 @@
 
   <div class="form-inputs">
     <%= f.input :email, required: true, autofocus: true %>
+    <div class="input-group mb-3">
+      <%= f.input :role, :collection => User::ROLES, :prompt => "Select a role", class: "custom-select" %>
+    </div>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>

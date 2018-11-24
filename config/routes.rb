@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
+  # devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' }
   get 'welcome_pages/index'
   get 'welcome_pages/show'
   root 'welcome_pages#index'
