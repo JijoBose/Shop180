@@ -8,6 +8,7 @@ class Ability
 
     can :manage, :all if user.role == "admin"
     can :manage, ProductSupplier, supplier_id: user.id if user.role == "supplier"
+    can :read, Product if user.role == "buyer"
 
     # The first argument to `can` is the action you are giving the user
     # permission to do.
