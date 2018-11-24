@@ -1,17 +1,17 @@
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
   <h5 class="my-0 mr-md-auto font-weight-normal">Shop180</h5>
   <nav class="my-2 my-md-0 mr-md-3">
-    <a class="p-2 text-dark" href="#">Features</a>
+    <%= link_to 'Products', products_path, class: "p-2 my-md-0 mr-md-3" %>
     <a class="p-2 text-dark" href="#">Enterprise</a>
     <a class="p-2 text-dark" href="#">Support</a>
     <a class="p-2 text-dark" href="#">Pricing</a>
   </nav>
   <% if user_signed_in? %>
     Logged in as <strong><%= current_user.email %></strong>
-    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'mr-2 btn btn-outline-primary' %>
-    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'mr-2 btn btn-outline-primary'  %>
+    <%= link_to 'Edit profile', edit_user_registration_path, class: 'mr-2 btn btn-outline-primary' %>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'mr-2 btn btn-outline-primary'  %>
   <% else %>
-    <%= link_to "Sign up", new_user_registration_path, :class => 'mr-2 btn btn-outline-primary' %>
-    <%= link_to "Login", new_user_session_path, :class => 'mr-2 btn btn-outline-primary' %>
+    <%= link_to "Sign up", new_user_registration_path, class: 'mr-2 btn btn-outline-primary' %>
+    <%= link_to "Login", new_user_session_path, class: 'mr-2 btn btn-outline-primary' %>
   <% end %>
 </div>
