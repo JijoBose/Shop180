@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :product_suppliers
-  resources :products
+  resources :products do
+    resources :product_suppliers
+  end
   # devise_for :users
   devise_for :users, :controllers => { registrations: 'registrations' }
   get 'welcome_pages/index'
